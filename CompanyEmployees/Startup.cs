@@ -61,7 +61,7 @@ namespace CompanyEmployees
             });
 
             app.ConfigureExceptionHandler(logger);
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseCors("CorsPolicy");
