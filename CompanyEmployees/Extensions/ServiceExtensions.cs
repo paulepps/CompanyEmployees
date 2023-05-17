@@ -38,10 +38,10 @@ namespace CompanyEmployees.Extensions
 
         public static void ConfigureSqlContext(this IServiceCollection services,
             IConfiguration configuration) =>
-                services.AddDbContext<RepositoryContext>(opts =>
-                               opts.UseSqlServer(configuration.GetConnectionString("sqlConnection")));
+                services.AddDbContext<RepositoryContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnection")));
+        
         public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) =>
-            builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
+        builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
 
         public static void AddCustomMediaTypes(this IServiceCollection services)
         {
@@ -49,7 +49,7 @@ namespace CompanyEmployees.Extensions
             {
                 var systemTextJsonOutputFormatter = config.OutputFormatters
                 .OfType<SystemTextJsonOutputFormatter>()?.FirstOrDefault();
-               
+
                 if (systemTextJsonOutputFormatter != null)
                 {
                     systemTextJsonOutputFormatter
