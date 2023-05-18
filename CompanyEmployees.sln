@@ -3,23 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees", "CompanyEmployees\CompanyEmployees.csproj", "{6CAF07A2-2538-437A-825E-5FDD1FF1AE94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyEmployees", "CompanyEmployees\CompanyEmployees.csproj", "{6CAF07A2-2538-437A-825E-5FDD1FF1AE94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{D263D687-DEA2-4A7F-A3B2-F393AD3EF542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{D263D687-DEA2-4A7F-A3B2-F393AD3EF542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{0BDC3C91-D986-451A-8D85-A3529E5DEF41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{0BDC3C91-D986-451A-8D85-A3529E5DEF41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{B1F77132-0439-4844-8A15-8184D95431F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{B1F77132-0439-4844-8A15-8184D95431F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{25BFE3F2-D879-4C95-A536-08A5914FDA35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{25BFE3F2-D879-4C95-A536-08A5914FDA35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{BDE9F728-3380-42A7-BDB0-43C2CE4F6DC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Contracts", "Service.Contracts\Service.Contracts.csproj", "{BDE9F728-3380-42A7-BDB0-43C2CE4F6DC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{E7CCED29-4BE8-4BEA-B89C-1B94D25EECAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{E7CCED29-4BE8-4BEA-B89C-1B94D25EECAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees.Presentation", "CompanyEmployees.Presentation\CompanyEmployees.Presentation.csproj", "{0C9D5137-655B-425A-A38E-2B77727D7060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyEmployees.Presentation", "CompanyEmployees.Presentation\CompanyEmployees.Presentation.csproj", "{0C9D5137-655B-425A-A38E-2B77727D7060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{029F83EA-0263-487C-BB53-6E497F4D9258}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{029F83EA-0263-487C-BB53-6E497F4D9258}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49EE5718-C590-425B-B238-1157A1AC6B15}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{B61AEA68-D92C-4108-8A4A-F75793001D66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +72,10 @@ Global
 		{029F83EA-0263-487C-BB53-6E497F4D9258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029F83EA-0263-487C-BB53-6E497F4D9258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{029F83EA-0263-487C-BB53-6E497F4D9258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61AEA68-D92C-4108-8A4A-F75793001D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61AEA68-D92C-4108-8A4A-F75793001D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61AEA68-D92C-4108-8A4A-F75793001D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61AEA68-D92C-4108-8A4A-F75793001D66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

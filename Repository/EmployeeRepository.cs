@@ -1,4 +1,5 @@
 ﻿using Contracts;
+using Entities;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repository.Extensions;
