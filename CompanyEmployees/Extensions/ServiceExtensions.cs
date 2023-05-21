@@ -39,7 +39,7 @@ namespace CompanyEmployees.Extensions
             else
                 services.AddDbContext<RepositoryContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("CompanyEmployees")));
 
-            services.BuildServiceProvider().GetService<RepositoryContext>().Database.Migrate();
+            //services.BuildServiceProvider().GetService<RepositoryContext>().Database.Migrate();
         }
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
             services.AddScoped<IRepositoryManager, RepositoryManager>();
