@@ -14,7 +14,7 @@ namespace CompanyEmployees.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "companies",
+                name: "Companies",
                 columns: table => new
                 {
                     CompanyId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -24,11 +24,11 @@ namespace CompanyEmployees.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_companies", x => x.CompanyId);
+                    table.PrimaryKey("PK_Companies", x => x.CompanyId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "employees",
+                name: "Employees",
                 columns: table => new
                 {
                     EmployeeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -39,17 +39,17 @@ namespace CompanyEmployees.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_employees", x => x.EmployeeId);
+                    table.PrimaryKey("PK_Employees", x => x.EmployeeId);
                     table.ForeignKey(
-                        name: "FK_employees_companies_CompanyId",
+                        name: "FK_Employees_Companies_CompanyId",
                         column: x => x.CompanyId,
-                        principalTable: "companies",
+                        principalTable: "Companies",
                         principalColumn: "CompanyId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
-                table: "companies",
+                table: "Companies",
                 columns: new[] { "CompanyId", "Address", "Country", "Name" },
                 values: new object[,]
                 {
@@ -58,7 +58,7 @@ namespace CompanyEmployees.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "employees",
+                table: "Employees",
                 columns: new[] { "EmployeeId", "Age", "CompanyId", "Name", "Position" },
                 values: new object[,]
                 {
@@ -68,8 +68,8 @@ namespace CompanyEmployees.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_employees_CompanyId",
-                table: "employees",
+                name: "IX_Employees_CompanyId",
+                table: "Employees",
                 column: "CompanyId");
         }
 
@@ -77,10 +77,10 @@ namespace CompanyEmployees.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "employees");
+                name: "Employees");
 
             migrationBuilder.DropTable(
-                name: "companies");
+                name: "Companies");
         }
     }
 }

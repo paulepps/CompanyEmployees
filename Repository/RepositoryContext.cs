@@ -1,8 +1,8 @@
-﻿using Entities.Configuration;
-using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Repository.Configuration;
 
-namespace Entities
+namespace Repository
 {
     public class RepositoryContext : DbContext
     {
@@ -14,8 +14,9 @@ namespace Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CompanyConfiguration());
-            modelBuilder.ApplyConfiguration(new EmployeeeConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
         }
+
         public DbSet<Company> Companies { get; set; }
         public DbSet<Employee> Employees { get; set; }
     }

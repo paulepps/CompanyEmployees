@@ -32,9 +32,15 @@ namespace CompanyEmployees.Extensions
             services.AddSingleton<ILoggerManager, LoggerManager>();
 
         public static void ConfigureSqlContext(this IServiceCollection services,
-            IConfiguration configuration) =>
+            IConfiguration configuration)
+        {
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+                services.AddDbContext<RepositoryContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnectionProd"), b => b.MigrationsAssembly("CompanyEmployees")));
+            else
                 services.AddDbContext<RepositoryContext>(opts => opts.UseSqlServer(configuration.GetConnectionString("sqlConnection"), b => b.MigrationsAssembly("CompanyEmployees")));
 
+            services.BuildServiceProvider().GetService<RepositoryContext>().Database.Migrate();
+        }
         public static void ConfigureRepositoryManager(this IServiceCollection services) =>
             services.AddScoped<IRepositoryManager, RepositoryManager>();
 
